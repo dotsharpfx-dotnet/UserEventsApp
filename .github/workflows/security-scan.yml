@@ -1,0 +1,55 @@
+# name: Security Scan
+
+# on:
+#   push:
+#     branches: [ main, develop ]
+#   pull_request:
+#     branches: [ main, develop ]
+#   schedule:
+#     - cron: '0 2 * * 0'  # Weekly on Sunday at 2 AM UTC
+
+# jobs:
+#   security:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#     - uses: actions/checkout@v4
+#       with:
+#         fetch-depth: 0
+
+#     - name: Setup .NET
+#       uses: actions/setup-dotnet@v4
+#       with:
+#         dotnet-version: '10.0.x'
+
+#     - name: Restore dependencies
+#       run: dotnet restore UserEventsApp.sln
+
+#     - name: Run dependency check
+#       run: |
+#         dotnet list UserEventsApp.sln package --vulnerable --include-transitive
+#       continue-on-error: true
+
+#     - name: SonarCloud Scan
+#       uses: SonarSource/sonarcloud-github-action@master
+#       env:
+#         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+#       with:
+#         args: >
+#           -Dsonar.projectKey=dotsharpfx-dotnet_UserEventsApp
+#           -Dsonar.organization=dotsharpfx-dotnet
+#       continue-on-error: true
+
+#     - name: Trivy vulnerability scanner
+#       uses: aquasecurity/trivy-action@master
+#       with:
+#         scan-type: 'fs'
+#         scan-ref: '.'
+#         format: 'sarif'
+#         output: 'trivy-results.sarif'
+
+#     - name: Upload Trivy results to GitHub Security tab
+#       uses: github/codeql-action/upload-sarif@v2
+#       with:
+#         sarif_file: 'trivy-results.sarif'

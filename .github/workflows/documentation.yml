@@ -1,0 +1,55 @@
+# name: Documentation
+
+# on:
+#   push:
+#     branches: [ main ]
+#     paths:
+#       - 'README.md'
+#       - 'TESTS.md'
+#       - 'ARTICLE.md'
+#       - '.github/workflows/documentation.yml'
+#   workflow_dispatch:
+
+# jobs:
+#   deploy-docs:
+#     runs-on: ubuntu-latest
+
+#     permissions:
+#       contents: read
+#       pages: write
+#       id-token: write
+
+#     environment:
+#       name: github-pages
+#       url: ${{ steps.deployment.outputs.page_url }}
+
+#     steps:
+#     - uses: actions/checkout@v4
+
+#     - name: Setup Pages
+#       uses: actions/configure-pages@v4
+
+#     - name: Create docs site
+#       run: |
+#         mkdir -p docs
+#         cp README.md docs/index.md
+#         cp TESTS.md docs/testing.md
+#         cp ARTICLE.md docs/article.md
+        
+#         # Create a simple index
+#         cat > docs/README.md << 'EOF'
+#         # UserEventsApp Documentation
+        
+#         - [Project Overview](index.md)
+#         - [Testing Guide](testing.md)
+#         - [Technical Article](article.md)
+#         EOF
+
+#     - name: Upload artifact
+#       uses: actions/upload-pages-artifact@v3
+#       with:
+#         path: 'docs'
+
+#     - name: Deploy to GitHub Pages
+#       id: deployment
+#       uses: actions/deploy-pages@v4
