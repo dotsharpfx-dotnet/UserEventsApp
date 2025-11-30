@@ -6,6 +6,9 @@ public class UserCreationHandler : IEventHandler<UserCreatedEvent>
 {
     public Task HandleAsync(UserCreatedEvent @event)
     {
+        if (@event == null)
+            throw new ArgumentNullException(nameof(@event), "Event cannot be null");
+            
         // Handle the UserCreatedEvent (e.g., log it, process it, etc.)
         Console.WriteLine($"User created: {@event.UserId}, Email: {@event.UserEmail}");
         return Task.CompletedTask;

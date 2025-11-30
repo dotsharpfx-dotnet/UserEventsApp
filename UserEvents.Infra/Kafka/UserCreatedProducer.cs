@@ -15,6 +15,9 @@ public class UserCreatedProducer<TKey, TValue>(
     private readonly string topic = options.Value.KafkaConfig.Topic;
     public async Task ProduceAsync(TKey key, TValue value)
     {
+        if (value == null)
+            throw new ArgumentNullException(nameof(value), "Event value cannot be null");
+            
         try
         {
             var message = new Message<TKey, TValue> { Key = key, Value = value };
