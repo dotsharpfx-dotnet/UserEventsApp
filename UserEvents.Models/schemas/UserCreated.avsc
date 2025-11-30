@@ -1,0 +1,11 @@
+{
+    "type": "record",
+    "name": "UserCreatedEvent",
+    "namespace": "App.Events",
+    "fields": [
+        { "name": "UserId", "type": "string", "doc": "The unique identifier for the user" },
+        { "name": "Username", "type": "string", "doc": "The display name of the user, chosen by the user"},
+        { "name": "UserEmail", "type": "string", "doc": "The email address of the user"},
+        { "name": "CreatedAt", "type": "long", "doc": "Unix timestamp in ms of creation" }
+    ]
+}

@@ -1,0 +1,11 @@
+/Users/vyaskarajgikar/github.com/dotsharpfx/dotnetsharpfx-dotnet/UserEventsApp/UserEvents.Models/bin/Debug/net10.0/UserEvents.Models.deps.json
+/Users/vyaskarajgikar/github.com/dotsharpfx/dotnetsharpfx-dotnet/UserEventsApp/UserEvents.Models/bin/Debug/net10.0/UserEvents.Models.dll
+/Users/vyaskarajgikar/github.com/dotsharpfx/dotnetsharpfx-dotnet/UserEventsApp/UserEvents.Models/bin/Debug/net10.0/UserEvents.Models.pdb
+/Users/vyaskarajgikar/github.com/dotsharpfx/dotnetsharpfx-dotnet/UserEventsApp/UserEvents.Models/obj/Debug/net10.0/UserEvents.Models.GeneratedMSBuildEditorConfig.editorconfig
+/Users/vyaskarajgikar/github.com/dotsharpfx/dotnetsharpfx-dotnet/UserEventsApp/UserEvents.Models/obj/Debug/net10.0/UserEvents.Models.AssemblyInfoInputs.cache
+/Users/vyaskarajgikar/github.com/dotsharpfx/dotnetsharpfx-dotnet/UserEventsApp/UserEvents.Models/obj/Debug/net10.0/UserEvents.Models.AssemblyInfo.cs
+/Users/vyaskarajgikar/github.com/dotsharpfx/dotnetsharpfx-dotnet/UserEventsApp/UserEvents.Models/obj/Debug/net10.0/UserEvents.Models.csproj.CoreCompileInputs.cache
+/Users/vyaskarajgikar/github.com/dotsharpfx/dotnetsharpfx-dotnet/UserEventsApp/UserEvents.Models/obj/Debug/net10.0/UserEvents.Models.dll
+/Users/vyaskarajgikar/github.com/dotsharpfx/dotnetsharpfx-dotnet/UserEventsApp/UserEvents.Models/obj/Debug/net10.0/refint/UserEvents.Models.dll
+/Users/vyaskarajgikar/github.com/dotsharpfx/dotnetsharpfx-dotnet/UserEventsApp/UserEvents.Models/obj/Debug/net10.0/UserEvents.Models.pdb
+/Users/vyaskarajgikar/github.com/dotsharpfx/dotnetsharpfx-dotnet/UserEventsApp/UserEvents.Models/obj/Debug/net10.0/ref/UserEvents.Models.dll
